@@ -813,11 +813,11 @@ PlayerSettings:
   apiCompatibilityLevel: 6
   activeInputHandler: 2
   windowsGamepadBackendHint: 0
-  cloudProjectId: 
+  cloudProjectId: 52b65c1a-521c-4e88-be30-2783c5b8373d
   framebufferDepthMemorylessMode: 0
   qualitySettingsNames: []
-  projectName: 
-  organizationId: 
+  projectName: 3d-school-main
+  organizationId: newgy
   cloudEnabled: 0
   legacyClampBlendShapeWeights: 0
   playerDataPath: 
