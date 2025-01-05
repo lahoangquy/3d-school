@@ -620,7 +620,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &92016527
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2067,6 +2067,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 263742701}
+        m_TargetAssemblyTypeName: ChoseProduct, Assembly-CSharp
+        m_MethodName: Update
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &263742699
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2128,6 +2140,8 @@ MonoBehaviour:
   TotalProductCost: {fileID: 1520001971}
   ProductDesc: {fileID: 1677478712}
   ProductPreviewPanel: {fileID: 92016526}
+  choseProductScript: {fileID: 263742701}
+  chooseProductScript2: {fileID: 781530607}
 --- !u!1 &275811495
 GameObject:
   m_ObjectHideFlags: 0
@@ -6668,7 +6682,7 @@ GameObject:
   - component: {fileID: 781530606}
   - component: {fileID: 781530605}
   - component: {fileID: 781530604}
-  - component: {fileID: 781530603}
+  - component: {fileID: 781530607}
   m_Layer: 5
   m_Name: Product2
   m_TagString: Product2
@@ -6697,29 +6711,6 @@ RectTransform:
   m_AnchoredPosition: {x: -137, y: 361.07892}
   m_SizeDelta: {x: 98.5401, y: 74.1031}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &781530603
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 781530601}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3778b5c6c6b546c4b9bc43d2e8875f09, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ProductTag: {fileID: 781530601}
-  ProductName: {fileID: 1570302287}
-  ProductNameView: {fileID: 640580672}
-  PriceOfProduct: {fileID: 1898967896}
-  ImageOfProduct: {fileID: 1426015092}
-  SpriteForImageOfProduct: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
-  ProductPrice: 100
-  AmoutOfProduce: {fileID: 590380508}
-  TotalProductCost: {fileID: 1520001971}
-  ProductDesc: {fileID: 1677478712}
-  ProductPreviewPanel: {fileID: 92016526}
 --- !u!114 &781530604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6764,9 +6755,21 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 781530603}
-        m_TargetAssemblyTypeName: ChoseProduct, Assembly-CSharp
+      - m_Target: {fileID: 781530607}
+        m_TargetAssemblyTypeName: ChooseProduct2, Assembly-CSharp
         m_MethodName: OnButtonClick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 781530607}
+        m_TargetAssemblyTypeName: ChooseProduct2, Assembly-CSharp
+        m_MethodName: Update
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -6814,6 +6817,31 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 781530601}
   m_CullTransparentMesh: 1
+--- !u!114 &781530607
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 781530601}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 137592bd725c59e429cd62448e3fc5b8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ProductTag: {fileID: 781530601}
+  ProductName: {fileID: 1570302287}
+  ProductNameView: {fileID: 640580672}
+  PriceOfProduct: {fileID: 1898967896}
+  ImageOfProduct: {fileID: 1426015092}
+  SpriteForImageOfProduct: {fileID: 21300000, guid: f71c0dc03d067a342aa16a51674f6507, type: 3}
+  ProductPrice: 100
+  AmoutOfProduce: {fileID: 590380508}
+  TotalProductCost: {fileID: 1520001971}
+  ProductDesc: {fileID: 1677478712}
+  ProductPreviewPanel: {fileID: 92016526}
+  choseProductScript: {fileID: 263742701}
+  chooseProductScript2: {fileID: 781530607}
 --- !u!1 &802835528
 GameObject:
   m_ObjectHideFlags: 0

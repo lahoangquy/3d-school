@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class ChoseProduct : MonoBehaviour
+public class ChooseProduct2 : MonoBehaviour
 {
     public GameObject ProductTag;
     public Text ProductName;
@@ -21,14 +21,12 @@ public class ChoseProduct : MonoBehaviour
     public Text ProductDesc;
     public GameObject ProductPreviewPanel;
     public ChoseProduct choseProductScript;
+    
     public ChooseProduct2 chooseProductScript2;
     public void Update(){
-        if(ProductTag.tag == "Product1"){
-            ProductPrice = 10;
+        if(ProductTag.tag == "Product2"){
+            ProductPrice = 100;
         }
-        // else if(ProductTag.tag == "Product2"){
-        //     ProductPrice = 100;
-        // }
 
         if (int.TryParse(AmoutOfProduce.text, out TotalAmount))
         {
@@ -42,32 +40,20 @@ public class ChoseProduct : MonoBehaviour
         }
     }
     public void OnButtonClick(){
-         if (chooseProductScript2.enabled && chooseProductScript2 != null){
-            chooseProductScript2.enabled = false;
-            choseProductScript.enabled =true;
-        }
         ProductPreviewPanel.SetActive(true);
-        if(ProductTag.tag == "Product1"){
-            print("found nigga1");
+        if (choseProductScript.enabled && choseProductScript != null){
+            choseProductScript.enabled = false;
+            chooseProductScript2.enabled = true;
+        }
+        if(ProductTag.tag == "Product2"){
+            print("found nigga2");
             price = ProductPrice.ToString();
-            ProductDesc.text = "Want more cafein???";
+            ProductDesc.text = "Is it? A Humannn?";
             ProductNameView.text = $"{ProductName.text}";
             PriceOfProduct.text = $"${price}";
             ImageOfProduct.sprite = SpriteForImageOfProduct;
             //TotalAmount = int.Parse(AmoutOfProduce.text);
-            TotalProductCost.text = "Total Cost: " + $"${TotalAmount*ProductPrice}";
+            TotalProductCost.text = "Total Cost: " + $"${TotalAmount*100}";
         }
-        // else if(ProductTag.tag == "Product2"){
-        //     print("found nigga2");
-        //     ProductPrice = 100;
-        //     price = ProductPrice.ToString();
-        //     ProductDesc.text = "Is it? A Humannn?";
-        //     ProductNameView.text = $"{ProductName.text}";
-        //     PriceOfProduct.text = $"${price}";
-        //     ImageOfProduct.sprite = SpriteForImageOfProduct;
-        //     TotalAmount = int.Parse(AmoutOfProduce.text);
-        //     TotalProductCost.text = "Total Cost: " + $"${TotalAmount*100}";
-        // }
     }
-    
 }
