@@ -51,6 +51,10 @@
         "temp/": true,
         "Temp/": true
     },
+<<<<<<< HEAD
     "dotnet.defaultSolution": "3DSchool.sln",
+=======
+    "dotnet.defaultSolution": "3d-school.sln",
+>>>>>>> GuiTest
     "dotnet.preferCSharpExtension": true
 }
