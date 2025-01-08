@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ChooseProduct2 : MonoBehaviour
 {
+    public static ChooseProduct2 instance2 {get;private set;}
     public GameObject ProductTag;
     public Text ProductName;
     public Text ProductNameView;
@@ -16,7 +17,7 @@ public class ChooseProduct2 : MonoBehaviour
     public InputField AmoutOfProduce;
     private int TotalAmount;
     public Text TotalProductCost;
-    private int totalCost;
+    public int totalCost;
     private string toStringTotalCost;
     public Text ProductDesc;
     public GameObject ProductPreviewPanel;
