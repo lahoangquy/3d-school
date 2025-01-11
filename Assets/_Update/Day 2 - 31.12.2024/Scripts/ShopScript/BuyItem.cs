@@ -33,10 +33,6 @@ public class BuyItem : MonoBehaviour
         print(Money);
     }
 
-    void Update(){
-        ItemCost = ChoseProduct.instance.totalCost;
-        //ItemCost = ChooseProduct2.instance2.totalCost;
-    }
     public void OnButtonClick(){
         Buying(ShopItem.Items.Coffe);
     }
@@ -55,14 +51,14 @@ public class BuyItem : MonoBehaviour
             }
             NumbersOfCoffeText.text = NumbersOfCoffe.ToString();
         }
-        // else if (productNameText.text == "A Human?"){
-        //     Debug.Log("you bought " + productNameText.text + " With price" + ItemCost);
-        //     Money -= ChooseProduct2.instance2.totalCost;
-        //     MoneyText.text = "Available Fund: " + Money.ToString();
-        //     if ((int.TryParse(ChooseProduct2.instance2.AmoutOfProduce.text,out AmoutOfProduce2))){
-        //     NumbersOfHuman += AmoutOfProduce2;
-        //     }
-        //     NumbersOfHumanText.text = NumbersOfHuman.ToString();
-        // }
+        else if (productNameText.text == "A Human?"){
+            Debug.Log("you bought " + productNameText.text + " With price" + ItemCost);
+            Money -= ChooseProduct2.instance2.totalCost;
+            MoneyText.text = "Available Fund: " + Money.ToString();
+            if ((int.TryParse(ChooseProduct2.instance2.AmoutOfProduce.text,out AmoutOfProduce2))){
+            NumbersOfHuman += AmoutOfProduce2;
+            }
+            NumbersOfHumanText.text = NumbersOfHuman.ToString();
+        }
     }
 }

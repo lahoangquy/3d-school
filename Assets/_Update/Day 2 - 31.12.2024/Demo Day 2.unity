@@ -216,7 +216,7 @@ GameObject:
   - component: {fileID: 1166581}
   - component: {fileID: 1166584}
   m_Layer: 5
-  m_Name: Button (Legacy)
+  m_Name: close
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9302,8 +9302,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -686, y: -0.0001183}
-  m_SizeDelta: {x: 403.5805, y: 71.559}
+  m_AnchoredPosition: {x: -618.74506, y: -0.0001183}
+  m_SizeDelta: {x: 507.2192, y: 71.559}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &849680104
 MonoBehaviour:
@@ -9338,7 +9338,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: 'Available Fund: 100'
+  m_Text: 'Available Fund: 1000'
 --- !u!222 &849680105
 CanvasRenderer:
   m_ObjectHideFlags: 0

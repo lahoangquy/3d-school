@@ -24,6 +24,12 @@ public class ChooseProduct2 : MonoBehaviour
     public ChoseProduct choseProductScript;
     
     public ChooseProduct2 chooseProductScript2;
+    void Awake(){
+        if (instance2 == null)
+        {
+            instance2 = this;
+        }
+    }
     public void Update(){
         if(ProductTag.tag == "Product2"){
             ProductPrice = 100;
