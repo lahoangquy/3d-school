@@ -19,6 +19,26 @@ public class CourseDetails : MonoBehaviour
             if (child.name == targetObjectName)
             {
                 child.gameObject.SetActive(true);
+                //For DegreeGUI
+                if (child.name == "ContentArc"){
+                    UserSelect.Instance.DArch = true;
+                }
+
+                if (child.name == "ContentLaw"){
+                    UserSelect.Instance.DLaw = true;
+                }
+
+                //For housingGUI
+                if (child.name == "UniversityHousing"){
+                    UserSelect.Instance.UniversityHousing = true;
+                }else{
+                    UserSelect.Instance.UniversityHousing = false;
+                }
+                if (child.name == "OffCampus"){
+                    UserSelect.Instance.OffCampus = true;
+                }else{
+                    UserSelect.Instance.OffCampus = false;
+                }
             }
             else
             {
