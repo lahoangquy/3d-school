@@ -27,7 +27,8 @@ public class UserSelect : MonoBehaviour
     //Check if Tuition Created
     public bool CreatedArch = false;
     public bool CreatedLaw = false;
-    
+    //Line Spacing between Items
+    float ItemSpacing=217.9722f;//-0.65f;
     void Start(){
         
     }
@@ -42,14 +43,14 @@ public class UserSelect : MonoBehaviour
         if (DArch && AddedDArch==false){
             CostNeedToPay += CostDArch;
             if (CreatedArch == false){
-                //TuitionScript.Instance.CreateTuition(ArchIcon, "Architecture Degree - AKA KYS when u grow",250,0);
+                TuitionScript.Instance.CreateTuition(ArchIcon, "Architecture Degree - AKA KYS when u grow",250,ItemSpacing);
                 CreatedArch = true;
             }
             AddedDArch = true;
         }else if (DLaw && AddedDLaw==false){
             CostNeedToPay += CostDLaw;
             if(CreatedLaw == false){
-                //TuitionScript.Instance.CreateTuition(LawIcon, "Law Degree - Alright gave him Death Row Already!",150,1);
+                TuitionScript.Instance.CreateTuition(LawIcon, "Law Degree - Alright gave him Death Row Already!",150,ItemSpacing-=139.3922f);
                 CreatedLaw = true;
             }
             AddedDLaw = true;

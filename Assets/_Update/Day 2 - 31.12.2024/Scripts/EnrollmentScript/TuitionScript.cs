@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,8 +12,6 @@ public class TuitionScript : MonoBehaviour
     public Transform Container;
     public Transform ItemTem;
 
-    
-
     public void Awake(){
         if (Instance==null) {
             Instance =this;
@@ -20,12 +19,12 @@ public class TuitionScript : MonoBehaviour
         ItemTem.gameObject.SetActive(false);
     }
 
-    public void CreateTuition(Sprite Icon,String Name,int Cost,int position){
+    public void CreateTuition(Sprite Icon,String Name,int Cost,float position){
         Transform ItemTransform = Instantiate(ItemTem,Container);
+        ItemTransform.gameObject.SetActive(true);
         RectTransform ItemRectTransform = ItemTransform.GetComponent<RectTransform>();
-
-        float Itemheight = 133.6228f;
-        ItemRectTransform.anchoredPosition = new Vector2(0, -Itemheight * position);
+    
+        ItemRectTransform.anchoredPosition = new Vector2(-10.71307f, position);
 
         ItemTransform.Find("NameTuition").GetComponent<Text>().text = Name;
         ItemTransform.Find("CostTuition").GetComponent<Text>().text = Cost.ToString();
