@@ -8,6 +8,7 @@ using System;
 public class UserSelect : MonoBehaviour
 {
     public static UserSelect Instance {get;private set;}
+    public GameObject Player;
     public bool Uni1,Uni2;//important
     public int CostNeedToPay;
     public bool DArch,DLaw;//important
@@ -30,7 +31,7 @@ public class UserSelect : MonoBehaviour
     //Line Spacing between Items
     float ItemSpacing=217.9722f;//-0.65f;
     void Start(){
-        
+        DontDestroyOnLoad(Player);
     }
     void Awake(){
         if (Instance==null){
