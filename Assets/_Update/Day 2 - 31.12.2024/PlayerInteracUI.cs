@@ -10,8 +10,19 @@ public class PlayerInteracUI : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _interactText;
     [SerializeField] private Transform _panelDialog;
 
+    void Awake(){
+        if (_playerInteract == null){
+            if (UserSelect.Instance.Female){
+                _playerInteract = GameObject.Find("FemalePlayer").GetComponent<PlayerInteract>();
+            }else if (UserSelect.Instance.Male){
+                _playerInteract = GameObject.Find("MalePlayer").GetComponent<PlayerInteract>();
+            }
+        }
+    }
+
     void Update()
     {
+        
         if(_panelDialog.gameObject.activeSelf) return;
         if(_playerInteract.GetInteractableObject() != null)
         {

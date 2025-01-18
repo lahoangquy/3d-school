@@ -10,7 +10,7 @@ public class DisableVideo : MonoBehaviour
     public GameObject CanvasVluIntro;
     public GameObject CanvasInfoSelection;
     public GameObject PlayerInv;
-    public GameObject PlayerHungerBar;
+    //public GameObject PlayerHungerBar;
 
     void Start(){
         if (VluIntro != null){
@@ -23,6 +23,6 @@ public class DisableVideo : MonoBehaviour
         CanvasVluIntro.gameObject.SetActive(false);
         CanvasInfoSelection.gameObject.SetActive(true);
         PlayerInv.gameObject.SetActive(true);
-        PlayerHungerBar.gameObject.SetActive(true);
+        //PlayerHungerBar.gameObject.SetActive(true);
     }
 }

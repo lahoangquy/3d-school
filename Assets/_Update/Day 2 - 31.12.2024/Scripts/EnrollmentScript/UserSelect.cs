@@ -4,11 +4,28 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 using System;
+using Cinemachine;
+using UnityEngine.SceneManagement;
 
 public class UserSelect : MonoBehaviour
 {
     public static UserSelect Instance {get;private set;}
-    public GameObject Player;
+
+    public GameObject ScriptContainer;
+
+    public GameObject MainCamera,CameraFollowPlayer;
+
+    public Transform CameraTargetMale,CameraTargetFemale;
+
+    public GameObject PlayerHungerBar;
+
+    //Gender Selection
+    public GameObject FemalePrefab;
+    public GameObject MalePrefab;
+
+    
+    public bool Male= false,Female = false;
+    //University Selection
     public bool Uni1,Uni2;//important
     public int CostNeedToPay;
     public bool DArch,DLaw;//important
@@ -31,7 +48,13 @@ public class UserSelect : MonoBehaviour
     //Line Spacing between Items
     float ItemSpacing=217.9722f;//-0.65f;
     void Start(){
-        DontDestroyOnLoad(Player);
+        DontDestroyOnLoad(FemalePrefab);
+        DontDestroyOnLoad(MalePrefab);
+        DontDestroyOnLoad(ScriptContainer);
+        DontDestroyOnLoad(MainCamera);
+        DontDestroyOnLoad(CameraFollowPlayer);
+        DontDestroyOnLoad(PlayerHungerBar);
+        
     }
     void Awake(){
         if (Instance==null){
@@ -41,6 +64,12 @@ public class UserSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (SceneManager.GetActiveScene().name =="Uni1"){
+            if (!PlayerHungerBar.activeSelf){
+                PlayerHungerBar.SetActive(true);
+            }
+        }
+        //degree
         if (DArch && AddedDArch==false){
             CostNeedToPay += CostDArch;
             if (CreatedArch == false){
@@ -71,5 +100,17 @@ public class UserSelect : MonoBehaviour
             DLawStatus.color = Color.red;
         }
         TotalCostText.text = CostNeedToPay.ToString();
+
+        if (Female){
+            FemalePrefab.SetActive(true);
+            MalePrefab.SetActive(false);
+            CameraFollowPlayer.GetComponent<CinemachineVirtualCamera>().Follow = CameraTargetFemale;
+        }else if (Male){
+            FemalePrefab.SetActive(false);
+            MalePrefab.SetActive(true);
+            CameraFollowPlayer.GetComponent<CinemachineVirtualCamera>().Follow = CameraTargetMale;
+        }
     }
+
+    //Gender Selection
 }
