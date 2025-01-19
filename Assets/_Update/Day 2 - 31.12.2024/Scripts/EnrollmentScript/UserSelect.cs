@@ -10,14 +10,14 @@ using UnityEngine.SceneManagement;
 public class UserSelect : MonoBehaviour
 {
     public static UserSelect Instance {get;private set;}
-
     public GameObject ScriptContainer;
+    //Player's camera
 
     public GameObject MainCamera,CameraFollowPlayer;
 
     public Transform CameraTargetMale,CameraTargetFemale;
 
-    public GameObject PlayerHungerBar;
+    //public GameObject PlayerHungerBar;
 
     //Gender Selection
     public GameObject FemalePrefab;
@@ -53,8 +53,6 @@ public class UserSelect : MonoBehaviour
         DontDestroyOnLoad(ScriptContainer);
         DontDestroyOnLoad(MainCamera);
         DontDestroyOnLoad(CameraFollowPlayer);
-        DontDestroyOnLoad(PlayerHungerBar);
-        
     }
     void Awake(){
         if (Instance==null){
@@ -64,11 +62,11 @@ public class UserSelect : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (SceneManager.GetActiveScene().name =="Uni1"){
-            if (!PlayerHungerBar.activeSelf){
-                PlayerHungerBar.SetActive(true);
-            }
-        }
+        // if (SceneManager.GetActiveScene().name =="Uni1"){
+        //     if (!PlayerHungerBar.activeSelf){
+        //         PlayerHungerBar.SetActive(true);
+        //     }
+        // }
         //degree
         if (DArch && AddedDArch==false){
             CostNeedToPay += CostDArch;

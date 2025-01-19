@@ -2303,6 +2303,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScriptContainer: {fileID: 146992363}
+  PlayerInv: {fileID: 1295667949}
   MainCamera: {fileID: 963194225}
   CameraFollowPlayer: {fileID: 1954181624}
   CameraTargetMale: {fileID: 4347631724088248204}

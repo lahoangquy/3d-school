@@ -19,6 +19,9 @@ public class Hungry : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (Fill ==null){
+            Fill = GameObject.Find("CanvasPlayerInfo").GetComponentInChildren<Image>();
+        }
       timer += Time.deltaTime;
       if (timer >= HungryTime)
         {
