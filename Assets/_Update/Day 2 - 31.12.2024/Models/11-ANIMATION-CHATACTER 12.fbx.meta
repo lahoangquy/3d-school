@@ -3,10 +3,65 @@ guid: eb215c09cfaeb00459d462f9c3a11bb3
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MOD1-EYE.001
+    second: {fileID: 2100000, guid: 7404dafc7f817a44db23a7bf66d74a7e, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MOD1-PANT-FABRIC.001
+    second: {fileID: 2100000, guid: e16975a0c5a18aa47a16f21a639fcf2d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MOD1-RING.001
+    second: {fileID: 2100000, guid: dbebb999dfdcf554c9f01d4148f42445, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MOD1-SHIRT.001
+    second: {fileID: 2100000, guid: e159b4555b29ea44391204edfcd7abf5, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MOD1-SHOE
+    second: {fileID: 2100000, guid: 04a66d4611afe1a4aa6ecf41cf31d10b, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MOD1-SHOE2
+    second: {fileID: 2100000, guid: 2245ccd30bbc71f45b4633f8d5bd3bac, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MOD1-SKIN-FACE.001
+    second: {fileID: 2100000, guid: 559dd12bac321c4459634758c88ca155, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MOD1-SKIN.001
+    second: {fileID: 2100000, guid: 8e2722218fbd39a4f9ee7117c9d039ad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: MOD1-SOCK
+    second: {fileID: 2100000, guid: 8fee7f0fe4a0b8041bab2fb7696170da, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tiny Iris 1.3 (Style Gold).001
+    second: {fileID: 2100000, guid: b4d4859ed6ecfc24986681c6091a35af, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Tiny Sclera 1.3 (Style Gold).001
+    second: {fileID: 2100000, guid: 4ae4bf2ce77c80043b37d8ef21849400, type: 2}
   materials:
     materialImportMode: 2
-    materialName: 0
+    materialName: 2
     materialSearch: 1
     materialLocation: 1
   animations:
