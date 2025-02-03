@@ -2303,12 +2303,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ScriptContainer: {fileID: 146992363}
-  PlayerInv: {fileID: 1295667949}
   MainCamera: {fileID: 963194225}
   CameraFollowPlayer: {fileID: 1954181624}
   CameraTargetMale: {fileID: 4347631724088248204}
   CameraTargetFemale: {fileID: 311460480}
-  PlayerHungerBar: {fileID: 877957248}
   FemalePrefab: {fileID: 3664455643298931065}
   MalePrefab: {fileID: 8051884954259962792}
   Male: 0
