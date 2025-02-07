@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class DoneButton : MonoBehaviour
 {
+    public GameObject EnrollmentUI;
     public void OnButtonClick(){
         if (UserSelect.Instance.Uni1 == true && UserSelect.Instance.Uni2 == false){
             SceneManager.LoadScene("uni1");
         }else if (UserSelect.Instance.Uni2 == true && UserSelect.Instance.Uni1 == false){
             SceneManager.LoadScene("uni2");
         }
+        EnrollmentUI.SetActive(false);
     }
 }

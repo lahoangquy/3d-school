@@ -22,6 +22,8 @@ public class UserSelect : MonoBehaviour
     //Gender Selection
     public GameObject FemalePrefab;
     public GameObject MalePrefab;
+    public GameObject VR;
+    public GameObject DeviceSimulatorVR;
 
     
     public bool Male= false,Female = false;
@@ -53,6 +55,8 @@ public class UserSelect : MonoBehaviour
         DontDestroyOnLoad(ScriptContainer);
         DontDestroyOnLoad(MainCamera);
         DontDestroyOnLoad(CameraFollowPlayer);
+        DontDestroyOnLoad(DeviceSimulatorVR);
+        DontDestroyOnLoad(VR);
     }
     void Awake(){
         if (Instance==null){

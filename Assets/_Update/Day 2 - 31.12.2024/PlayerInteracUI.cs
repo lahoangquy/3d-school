@@ -16,6 +16,8 @@ public class PlayerInteracUI : MonoBehaviour
                 _playerInteract = GameObject.Find("FemalePlayer").GetComponent<PlayerInteract>();
             }else if (UserSelect.Instance.Male){
                 _playerInteract = GameObject.Find("MalePlayer").GetComponent<PlayerInteract>();
+            }else {
+                _playerInteract = GameObject.FindWithTag("Player").GetComponentInChildren<PlayerInteract>(GameObject.Find("XR Origin (XR Rig)"));
             }
         }
     }
