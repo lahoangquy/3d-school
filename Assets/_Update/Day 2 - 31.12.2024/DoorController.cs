@@ -33,8 +33,12 @@ public class DoorController : MonoBehaviour
                 targetOpen = -openAngle; // Mở cửa theo hướng này
             }
 
-            InvokeRepeating("OpenDoor", 0f, 0.01f);
+            Invoke("OpenDoor",0f);
         }
+    }
+
+    private void OnTriggerStay(Collider other){
+        Invoke("OpenDoor", 0f);
     }
 
     private void OnTriggerExit(Collider other)
@@ -42,11 +46,11 @@ public class DoorController : MonoBehaviour
         if (other.CompareTag("Player"))
         {
             CancelInvoke("OpenDoor"); // Hủy việc mở cửa nếu đang thực hiện
-            InvokeRepeating("CloseDoor", 0f, 0.01f);
+            Invoke("CloseDoor", 0f);
         }
     }
 
-    private void OpenDoor()
+    public void OpenDoor()
     {
         // isRotating = true;
 

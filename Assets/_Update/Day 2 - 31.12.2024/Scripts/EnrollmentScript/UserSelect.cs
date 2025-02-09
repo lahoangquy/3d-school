@@ -50,8 +50,8 @@ public class UserSelect : MonoBehaviour
     //Line Spacing between Items
     float ItemSpacing=217.9722f;//-0.65f;
     void Start(){
-        DontDestroyOnLoad(FemalePrefab);
-        DontDestroyOnLoad(MalePrefab);
+        // DontDestroyOnLoad(FemalePrefab);
+        // DontDestroyOnLoad(MalePrefab);
         DontDestroyOnLoad(ScriptContainer);
         DontDestroyOnLoad(MainCamera);
         DontDestroyOnLoad(CameraFollowPlayer);
