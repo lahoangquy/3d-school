@@ -51,6 +51,6 @@
         "temp/": true,
         "Temp/": true
     },
-    "dotnet.defaultSolution": "3d-school-UI.sln",
+    "dotnet.defaultSolution": "3d-school-v2.sln",
     "dotnet.preferCSharpExtension": true
 }
